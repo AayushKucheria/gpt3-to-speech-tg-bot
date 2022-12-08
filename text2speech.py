@@ -5,11 +5,12 @@ import os
 from io import BytesIO
 from pygame import mixer
 import time
-from secrets import openai_key
 
 ## Speech2Text pip install git+https://github.com/openai/whisper.git
 import openai
 import whisper
+
+openai_key = os.environ['openai_api_key']
 
 import sys
 if not sys.warnoptions:

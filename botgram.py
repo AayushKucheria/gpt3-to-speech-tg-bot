@@ -1,9 +1,10 @@
+import os
 import text2speech
 import time
 
-# TELEGRAM THINGY
+openai_key = os.environ['openai_api_key']
+telegram_key = os.environ['tg_api_key']
 
-TELEGRAM_API_KEY = '5754230605:AAErjhrodU9sjLdSXG_9bkh_T395phP5p-M'
 
 # Remove this line
 from telegram import Update, Bot
@@ -53,11 +54,11 @@ def get_voice(update: Update, context: CallbackContext) -> None:
     # return bot.send_voice(chat_id=chat_id, "voice_note.ogg")
 
 # Create bot
-bot = Bot(token=TELEGRAM_API_KEY)
+bot = Bot(token=telegram_key)
 
 # Monitor the bot
 print("starting")
-updater = Updater(TELEGRAM_API_KEY)
+updater = Updater(telegram_key)
 forward_message_handler = MessageHandler(Filters.voice, get_voice)
 updater.dispatcher.add_handler(forward_message_handler)
 updater.start_polling(
