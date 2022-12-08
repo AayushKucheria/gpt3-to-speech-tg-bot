@@ -1,0 +1,12 @@
+ffmpeg==1.4
+ffmpeg-python==0.2.0
+GitPython==3.1.27
+glfw==2.5.5
+gTTS==2.3.0
+gym==0.25.2
+pandas==1.4.4
+pygame==2.1.0
+Pygments==2.13.0
+torch==1.12.1
+whisper @ git+https://github.com/openai/whisper.git@b9265e5796f5d80c18d1f9231ab234225676780b
+
